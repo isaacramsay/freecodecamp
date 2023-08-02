@@ -10,11 +10,12 @@ def computepay(hours, rate):
     else:
         print("Pay:", hours * rate)
 
+
 try:
     hours = int(input("Enter hours: "))
     rate = int(input("Enter pay: "))
 
-except ValueError as e:
+except ValueError:
     print("Please enter a number.")
 
 else:

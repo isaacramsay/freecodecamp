@@ -11,10 +11,9 @@ while True:
 
     else:
         if hours > 40:
-            pay = 40 * rate
             ot_hours = hours - 40
             ot_pay = (rate * 1.5) * ot_hours
-            pay = pay + ot_pay
+            pay = (rate * 40) + ot_pay
             print("Pay:", pay)
         else:
             print("Pay:", hours * rate)

@@ -1,4 +1,4 @@
-#Exercise 7: Rewrite the grade program from the previous chapter using a function called computegrade that takes a score as its parameter and returns a grade as a string.
+# Exercise 7: Rewrite the grade program from the previous chapter using a function called computegrade that takes a score as its parameter and returns a grade as a string.
 
 def computegrade(score):
     if score > 1.0:
@@ -14,10 +14,11 @@ def computegrade(score):
     else:
         print("F")
 
+
 try:
     score = float(input("Enter score between 0.0 and 1.0: "))
 
-except ValueError as e:
+except ValueError:
     print("Please enter a score between 0.0 and 1.0.")
 
 else:
