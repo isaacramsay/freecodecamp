@@ -6,17 +6,23 @@ def computepay(hours, rate):
         ot_hours = hours - 40
         ot_pay = (rate * 1.5) * ot_hours
         pay = pay + ot_pay
-        print("Pay:", pay)
-    else:
-        print("Pay:", hours * rate)
 
+    else:
+        pay = hours * rate
+
+    return pay
+
+
+hours = input("Enter hours: ")
+rate = input("Enter pay: ")
 
 try:
-    hours = int(input("Enter hours: "))
-    rate = int(input("Enter pay: "))
+    hours = float(hours)
+    rate = float(rate)
 
 except ValueError:
     print("Please enter a number.")
 
 else:
-    computepay(hours=hours, rate=rate)
+    pay = computepay(hours=hours, rate=rate)
+    print("Pay:", pay)
